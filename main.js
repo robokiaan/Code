@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
     jQuery('.sb').hide()
+    jQuery('#input_message').val(localStorage.getItem('lastInput'))
 })
 
 var key = {
@@ -468,4 +469,8 @@ function decrypt() {
 
 String.prototype.replaceAt = function(index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + 1, this.length + 1)
+}
+
+function save() {
+    localStorage.setItem('lastInput', jQuery('#input_message').val())
 }
