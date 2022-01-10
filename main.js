@@ -1,90 +1,90 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
     jQuery('.sb').hide()
     jQuery('#input_message').val(localStorage.getItem('lastInput'))
 })
 
 var key = {
-    'A':'25',
-    'B':'24',
-    'C':'23',
-    'D':'22',
-    'E':'21',
-    'F':'20',
-    'G':'19',
-    'H':'18',
-    'I':'17',
-    'J':'16',
-    'K':'15',
-    'L':'14',
-    'M':'13',
-    'N':'12',
-    'O':'11',
-    'P':'10',
-    'Q':'9',
-    'R':'8',
-    'S':'7',
-    'T':'6',
-    'U':'5',
-    'V':'4',
-    'W':'3',
-    'X':'2',
-    'Y':'1',
-    'Z':'0',
+    'A': '25',
+    'B': '24',
+    'C': '23',
+    'D': '22',
+    'E': '21',
+    'F': '20',
+    'G': '19',
+    'H': '18',
+    'I': '17',
+    'J': '16',
+    'K': '15',
+    'L': '14',
+    'M': '13',
+    'N': '12',
+    'O': '11',
+    'P': '10',
+    'Q': '9',
+    'R': '8',
+    'S': '7',
+    'T': '6',
+    'U': '5',
+    'V': '4',
+    'W': '3',
+    'X': '2',
+    'Y': '1',
+    'Z': '0',
 
-    '0':'Z',
-    '1':'Y',
-    '2':'X',
-    '3':'W',
-    '4':'V',
-    '5':'U',
-    '6':'T',
-    '7':'S',
-    '8':'R',
-    '9':'Q',
+    '0': 'Z',
+    '1': 'Y',
+    '2': 'X',
+    '3': 'W',
+    '4': 'V',
+    '5': 'U',
+    '6': 'T',
+    '7': 'S',
+    '8': 'R',
+    '9': 'Q',
 
-    ' ':'26',
+    ' ': '26',
 }
 
 var decryptkey = {
-    '25':'A',
-    '24':'B',
-    '23':'C',
-    '22':'D',
-    '21':'E',
-    '20':'F',
-    '19':'G',
-    '18':'H',
-    '17':'I',
-    '16':'J',
-    '15':'K',
-    '14':'L',
-    '13':'M',
-    '12':'N',
-    '11':'O',
-    '10':'P',
-    '9':'Q',
-    '8':'R',
-    '7':'S',
-    '6':'T',
-    '5':'U',
-    '4':'V',
-    '3':'W',
-    '2':'X',
-    '1':'Y',
-    '0':'Z',
+    '25': 'A',
+    '24': 'B',
+    '23': 'C',
+    '22': 'D',
+    '21': 'E',
+    '20': 'F',
+    '19': 'G',
+    '18': 'H',
+    '17': 'I',
+    '16': 'J',
+    '15': 'K',
+    '14': 'L',
+    '13': 'M',
+    '12': 'N',
+    '11': 'O',
+    '10': 'P',
+    '9': 'Q',
+    '8': 'R',
+    '7': 'S',
+    '6': 'T',
+    '5': 'U',
+    '4': 'V',
+    '3': 'W',
+    '2': 'X',
+    '1': 'Y',
+    '0': 'Z',
 
-    'Z':'0',
-    'Y':'1',
-    'X':'2',
-    'W':'3',
-    'V':'4',
-    'U':'5',
-    'T':'6',
-    'S':'7',
-    'R':'8',
-    'Q':'9',
+    'Z': '0',
+    'Y': '1',
+    'X': '2',
+    'W': '3',
+    'V': '4',
+    'U': '5',
+    'T': '6',
+    'S': '7',
+    'R': '8',
+    'Q': '9',
 
-    '26':' ',
+    '26': ' ',
 }
 
 function encrypt_message() {
@@ -274,7 +274,7 @@ function encrypt_message() {
 
 function decrypt_message() {
     code = jQuery('#input_message').val()
-    if (code == 'Revelare Mysteria Tua' || code == 'Dhananya') {
+    if (code == 'Kingpin' || code == 'Spider-Man' || code == 'Iron Man' ) {
         jQuery('.sb').show()
         jQuery('.btn').css('margin-top', '40px')
         jQuery('.btn').removeClass('col-sm-6')
@@ -284,121 +284,121 @@ function decrypt_message() {
         clean()
     } else {
         codeChars = String(code).split('.')
-    for (i = 0; i < codeChars.length - 1; i++) {
-        char = codeChars[i]
-        if (char == '0') {
-            codeChars[i] = 'A'
-        } else if (char == '1') {
-            codeChars[i] = 'B'
-        } else if (char == '2') {
-            codeChars[i] = 'C'
-        } else if (char == '3') {
-            codeChars[i] = 'D'
-        } else if (char == '4') {
-            codeChars[i] = 'E'
-        } else if (char == '5') {
-            codeChars[i] = 'F'
-        } else if (char == '6') {
-            codeChars[i] = 'G'
-        } else if (char == '7') {
-            codeChars[i] = 'H'
-        } else if (char == '8') {
-            codeChars[i] = 'I'
-        } else if (char == '9') {
-            codeChars[i] = 'J'
-        } else if (char == '10') {
-            codeChars[i] = 'K'
-        } else if (char == '11') {
-            codeChars[i] = 'L'
-        } else if (char == '12') {
-            codeChars[i] = 'M'
-        } else if (char == '13') {
-            codeChars[i] = 'N'
-        } else if (char == '14') {
-            codeChars[i] = 'O'
-        } else if (char == '15') {
-            codeChars[i] = 'P'
-        } else if (char == '16') {
-            codeChars[i] = 'Q'
-        } else if (char == '17') {
-            codeChars[i] = 'R'
-        } else if (char == '18') {
-            codeChars[i] = 'S'
-        } else if (char == '19') {
-            codeChars[i] = 'T'
-        } else if (char == '20') {
-            codeChars[i] = 'U'
-        } else if (char == '21') {
-            codeChars[i] = 'V'
-        } else if (char == '22') {
-            codeChars[i] = 'W'
-        } else if (char == '23') {
-            codeChars[i] = 'X'
-        } else if (char == '24') {
-            codeChars[i] = 'Y'
-        } else if (char == '25') {
-            codeChars[i] = 'Z'
-        } else if (char == '26') {
-            codeChars[i] = ' '
-        } else if (char == 'B') {
-            codeChars[i] = '1'
-        } else if (char == 'C') {
-            codeChars[i] = '2'
-        } else if (char == 'D') {
-            codeChars[i] = '3'
-        } else if (char == 'E') {
-            codeChars[i] = '4'
-        } else if (char == 'F') {
-            codeChars[i] = '5'
-        } else if (char == 'G') {
-            codeChars[i] = '6'
-        } else if (char == 'H') {
-            codeChars[i] = '7'
-        } else if (char == 'I') {
-            codeChars[i] = '8'
-        } else if (char == 'J') {
-            codeChars[i] = '9'
-        } else if (char == 'A') {
-            codeChars[i] = '0'
-        } else if (char == '27') {
-            codeChars[i] = '('
-        } else if (char == '28') {
-            codeChars[i] = ')'
-        } else if (char == '29') {
-            codeChars[i] = ':'
-        } else if (char == '30') {
-            codeChars[i] = '-'
-        } else if (char == '31') {
-            codeChars[i] = '+'
-        } else if (char == '32') {
-            codeChars[i] = '='
-        } else if (char == '33') {
-            codeChars[i] = ','
-        } else if (char == '34') {
-            codeChars[i] = '?'
-        } else if (char == '35') {
-            codeChars[i] = '/'
-        } else if (char == '36') {
-            codeChars[i] = '!'
-        } else if (char == '37') {
-            codeChars[i] = '*'
-        } else if (char == '38') {
-            codeChars[i] = '%'
-        } else if (char == '39') {
-            codeChars[i] = '$'
-        } else if (char == '40') {
-            codeChars[i] = '&'
-        } else if (char == '41') {
-            codeChars[i] = '"'
-        } else if (char == '42') {
-            codeChars[i] = "'"
+        for (i = 0; i < codeChars.length - 1; i++) {
+            char = codeChars[i]
+            if (char == '0') {
+                codeChars[i] = 'A'
+            } else if (char == '1') {
+                codeChars[i] = 'B'
+            } else if (char == '2') {
+                codeChars[i] = 'C'
+            } else if (char == '3') {
+                codeChars[i] = 'D'
+            } else if (char == '4') {
+                codeChars[i] = 'E'
+            } else if (char == '5') {
+                codeChars[i] = 'F'
+            } else if (char == '6') {
+                codeChars[i] = 'G'
+            } else if (char == '7') {
+                codeChars[i] = 'H'
+            } else if (char == '8') {
+                codeChars[i] = 'I'
+            } else if (char == '9') {
+                codeChars[i] = 'J'
+            } else if (char == '10') {
+                codeChars[i] = 'K'
+            } else if (char == '11') {
+                codeChars[i] = 'L'
+            } else if (char == '12') {
+                codeChars[i] = 'M'
+            } else if (char == '13') {
+                codeChars[i] = 'N'
+            } else if (char == '14') {
+                codeChars[i] = 'O'
+            } else if (char == '15') {
+                codeChars[i] = 'P'
+            } else if (char == '16') {
+                codeChars[i] = 'Q'
+            } else if (char == '17') {
+                codeChars[i] = 'R'
+            } else if (char == '18') {
+                codeChars[i] = 'S'
+            } else if (char == '19') {
+                codeChars[i] = 'T'
+            } else if (char == '20') {
+                codeChars[i] = 'U'
+            } else if (char == '21') {
+                codeChars[i] = 'V'
+            } else if (char == '22') {
+                codeChars[i] = 'W'
+            } else if (char == '23') {
+                codeChars[i] = 'X'
+            } else if (char == '24') {
+                codeChars[i] = 'Y'
+            } else if (char == '25') {
+                codeChars[i] = 'Z'
+            } else if (char == '26') {
+                codeChars[i] = ' '
+            } else if (char == 'B') {
+                codeChars[i] = '1'
+            } else if (char == 'C') {
+                codeChars[i] = '2'
+            } else if (char == 'D') {
+                codeChars[i] = '3'
+            } else if (char == 'E') {
+                codeChars[i] = '4'
+            } else if (char == 'F') {
+                codeChars[i] = '5'
+            } else if (char == 'G') {
+                codeChars[i] = '6'
+            } else if (char == 'H') {
+                codeChars[i] = '7'
+            } else if (char == 'I') {
+                codeChars[i] = '8'
+            } else if (char == 'J') {
+                codeChars[i] = '9'
+            } else if (char == 'A') {
+                codeChars[i] = '0'
+            } else if (char == '27') {
+                codeChars[i] = '('
+            } else if (char == '28') {
+                codeChars[i] = ')'
+            } else if (char == '29') {
+                codeChars[i] = ':'
+            } else if (char == '30') {
+                codeChars[i] = '-'
+            } else if (char == '31') {
+                codeChars[i] = '+'
+            } else if (char == '32') {
+                codeChars[i] = '='
+            } else if (char == '33') {
+                codeChars[i] = ','
+            } else if (char == '34') {
+                codeChars[i] = '?'
+            } else if (char == '35') {
+                codeChars[i] = '/'
+            } else if (char == '36') {
+                codeChars[i] = '!'
+            } else if (char == '37') {
+                codeChars[i] = '*'
+            } else if (char == '38') {
+                codeChars[i] = '%'
+            } else if (char == '39') {
+                codeChars[i] = '$'
+            } else if (char == '40') {
+                codeChars[i] = '&'
+            } else if (char == '41') {
+                codeChars[i] = '"'
+            } else if (char == '42') {
+                codeChars[i] = "'"
+            }
         }
-    }
-    code = String(codeChars)
-    while(code.includes(',')) {
-        code = code.replace(',', '')
-    }
-    jQuery('#output_message').val(code)
+        code = String(codeChars)
+        while (code.includes(',')) {
+            code = code.replace(',', '')
+        }
+        jQuery('#output_message').val(code)
     }
 }
 
@@ -446,9 +446,9 @@ function decrypt() {
     message = message.split('.')
     for (i = 0; i < message.length; i++) {
         char = message[i]
-        if(isNaN(char)) { 
+        if (isNaN(char)) {
             char = decryptkey[char]
-            if(char == undefined) {
+            if (char == undefined) {
                 char = message[i]
             }
         } else {
@@ -467,7 +467,7 @@ function decrypt() {
     jQuery('#output_message').val(message)
 }
 
-String.prototype.replaceAt = function(index, replacement) {
+String.prototype.replaceAt = function (index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + 1, this.length + 1)
 }
 
