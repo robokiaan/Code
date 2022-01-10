@@ -274,7 +274,7 @@ function encrypt_message() {
 
 function decrypt_message() {
     code = jQuery('#input_message').val()
-    if (code == 'Neutralization reaction' || code == 'Dhananya') {
+    if (code == 'Revelare Mysteria Tua' || code == 'Dhananya') {
         jQuery('.sb').show()
         jQuery('.btn').css('margin-top', '40px')
         jQuery('.btn').removeClass('col-sm-6')
