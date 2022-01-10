@@ -1,6 +1,6 @@
 body {
     font-family: cursive;
-    background-color: darkslategray;
+    background-color: black;
 }
 
 .screen {
@@ -14,8 +14,8 @@ h1 {
     color: white;
     border-left: 0px;
     border-right: 0px;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
     margin-right: 0px;
     margin-left: 0px;
     border-radius: 0px;
@@ -23,14 +23,14 @@ h1 {
 
 .btn {
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid red;
     color: white;
     font-weight: bold;
     margin-top: 70px;
 }
 
 .btn:hover, .btn:focus {
-    color: white;
+    color: red;
 }
 
 textarea {
@@ -39,7 +39,7 @@ textarea {
     height: 525px;
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid white;
+    border: 2px solid red;
     color: white;
     background-color: transparent;
     font-size: 20px;
