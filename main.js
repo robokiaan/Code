@@ -274,14 +274,32 @@ function encrypt_message() {
 
 function decrypt_message() {
     code = jQuery('#input_message').val()
-    if (code == 'Kingpin' || code == 'Spider-Man' || code == 'Iron Man' ) {
+    code = String(code)
+    if (code.includes('Kingpin') || code.includes('Spider-Man') || code.includes('Iron Man')) {
         jQuery('.sb').show()
         jQuery('.btn').css('margin-top', '40px')
         jQuery('.btn').removeClass('col-sm-6')
         jQuery('.btn').removeClass('col-xs-6')
         jQuery('.btn').addClass('col-sm-4')
         jQuery('.btn').addClass('col-xs-4')
-        clean()
+        if (code.includes('Kingpin')) {
+            var pos = String(code).indexOf('Kingpin')
+            var code = String(code).substring(0, Number(pos)) + String(code).substring(Number(pos) + 7)
+        } else if (code.includes('Spider-Man')) {
+            var pos = String(code).indexOf('Spider-man')
+            var code = String(code).substring(0, Number(pos)) + String(code).substring(Number(pos) + 10)
+        } else if (code.includes('Iron Man')) {
+            var pos = String(code).indexOf('Iron Man')
+            var code = String(code).substring(0, Number(pos)) + String(code).substring(Number(pos) + 8)
+        }
+        jQuery('#output_message').val('')
+        jQuery('#input_message').val(code)
+    } else if (code == 'background') {
+        jQuery('body').css('background-color', 'darkslategray')
+        jQuery('.btn').css('border', '2px solid white')
+        jQuery('h1').css('border-top', '2px solid white')
+        jQuery('h1').css('border-bottom', '2px solid white')
+        jQuery('textarea').css('border', '2px solid white')
     } else {
         codeChars = String(code).split('.')
         for (i = 0; i < codeChars.length - 1; i++) {

@@ -30,7 +30,7 @@ h1 {
 }
 
 .btn:hover, .btn:focus {
-    color: red;
+    color: white;
 }
 
 textarea {
